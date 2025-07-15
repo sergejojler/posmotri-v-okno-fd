@@ -9,13 +9,16 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -47,5 +50,223 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
+
+.content {
+  display: flex;
+  flex-direction: row;
+
+  gap: 30px;
+
+  max-width: 1140px;
+  max-height: 534px;
+}
+.result {
+  /* display: flex;
+  
+  align-items: flex-end;
+  gap: 16px; */
+  padding-top: 78px;
+}
+.result__video-container {
+  width: 711px;
+  height: 386px;
+  /* position: relative; */
+  margin-bottom: 16px;
+}
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.search-form {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  /* max-width: 711px;
+  max-height: 54px; */
+}
+.search-form__fieldset {
+  border: none;
+}
+.search-form__fieldset-title {
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.search-form__label {
+  display: flex;
+  align-items:center;
+  gap: 5px;
+  width: fit-content;
+  
+}
+.search-form__label-text {
+
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__label:has(.search-form__checkbox:focus-visible) {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+    position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.search-form__textfield {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  appearance: none;
+
+}
+
+.search-form__textfield::placeholder{
+  color: rgb(255 255 255 / 0.7);
+}
+
+
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.search-form__checkbox {
+}
+
+.search-form__pseudo-checkbox {
+  border: 1px solid #fff;
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 19px;
+  height: 19px;
+  
+}
+
+.search-form__pseudo-checkbox::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+
+.button {
+}
+.search-form__submit-button {
+}
+.content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.title {
+  font-family: Oswald;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 75px;
+
+  line-height: 94%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.content__accent {
+  color: #545050;
+}
+.content__list-container {
+  gap: 30px;
+  overflow-y: auto;
+}
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.preloader-template {
+}
+.preloader {
+}
+.preloader-chasing-squares {
+}
+.square {
+}
+.cards-list-item-template {
+}
+.content__list-item {
+}
+.content__card-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.content__video-card-title {
+  font-family: Oswald;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  /* text-transform: uppercase; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 196px;
+}
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 16.2px;
+  letter-spacing: 0%;
+  line-clamp: 2;
+}
+.content__video-card-thumbnail {
+  max-width: 194px;
+  max-height: 103px;
+  object-fit: cover;
+  object-position: center;
+}
+.more-button-template {
+}
+.more-button {
+}
+.error-template {
+}
+.error {
+}
+.error__title {
+}
+
