@@ -56,23 +56,18 @@ ol {
 .content {
   display: flex;
   flex-direction: row;
-
   gap: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
 
-  max-width: 1140px;
   max-height: 534px;
 }
 .result {
-  /* display: flex;
-  
-  align-items: flex-end;
-  gap: 16px; */
   padding-top: 78px;
 }
 .result__video-container {
   width: 711px;
   height: 386px;
-  /* position: relative; */
   margin-bottom: 16px;
 }
 .result__video {
@@ -83,32 +78,25 @@ ol {
 }
 .search-form {
   display: flex;
-  flex-direction: row;
-  gap: 40px;
-  /* max-width: 711px;
-  max-height: 54px; */
+
+  justify-content: space-between;
+  align-items: center;
 }
 .search-form__fieldset {
   border: none;
 }
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
   font-weight: 400;
-  font-style: normal;
+
   font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
 }
 .search-form__label {
   display: flex;
-  align-items:center;
+  align-items: center;
   gap: 5px;
   width: fit-content;
-  
 }
-.search-form__label-text {
 
-}
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
@@ -120,7 +108,7 @@ ol {
 }
 
 .visually-hidden {
-    position: absolute;
+  position: absolute;
   inline-size: 1px;
   block-size: 1px;
   overflow: hidden;
@@ -129,24 +117,24 @@ ol {
   white-space: nowrap;
 }
 .search-form__textfield {
+  border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   background: transparent;
   appearance: none;
-
+  font-size: 18px;
+  min-width: 225px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.search-form__textfield::placeholder{
+.search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
 }
-
 
 .search-form__checkbox-list {
   display: flex;
   flex-direction: row;
   gap: 15px;
-}
-.search-form__checkbox {
 }
 
 .search-form__pseudo-checkbox {
@@ -158,10 +146,9 @@ ol {
   cursor: pointer;
   width: 19px;
   height: 19px;
-  
 }
 
-.search-form__pseudo-checkbox::after{
+.search-form__pseudo-checkbox::after {
   content: "";
   display: block;
   width: 100%;
@@ -175,13 +162,36 @@ ol {
 }
 
 .button {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
 .search-form__submit-button {
+  align-self: flex-end;
+  width: 194px;
+  height: 34px;
 }
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 22px;
 }
 .title {
   font-family: Oswald;
@@ -199,28 +209,45 @@ ol {
 .content__list-container {
   gap: 30px;
   overflow-y: auto;
+  /* overflow-x: hidden; */
 }
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.preloader-template {
-}
-.preloader {
-}
-.preloader-chasing-squares {
-}
-.square {
-}
-.cards-list-item-template {
-}
+
 .content__list-item {
+  padding-left: 3px;
+  padding-right: 3px;
 }
 .content__card-link {
+  display: block;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
 }
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #ffffff;
+  outline-offset: 0;
+}
+
 .content__video-card {
   display: flex;
   flex-direction: row;
@@ -234,11 +261,11 @@ ol {
 .content__video-card-title {
   font-family: Oswald;
   font-weight: 700;
-  font-style: Bold;
+  font-style: normal;
   font-size: 30px;
   line-height: 100%;
   letter-spacing: 0%;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -259,14 +286,18 @@ ol {
   object-fit: cover;
   object-position: center;
 }
-.more-button-template {
-}
+
 .more-button {
-}
-.error-template {
-}
-.error {
-}
-.error__title {
+  width: 100%;
+  height: 34px;
+  margin-top: 30px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
 }
 
+.result__video-container,
+.content__list-container {
+  position: relative;
+}
